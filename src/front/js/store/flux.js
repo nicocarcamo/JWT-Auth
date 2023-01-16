@@ -47,7 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 						
 				try{
-					const resp = await fetch("https://nicocarcamo-jwtauth-vyn67hewqg8.ws-us82.gitpod.io/api/token", opts)
+					const resp = await fetch("https://3001-nicocarcamo-jwtauth-4lchsqpz9v9.ws-us82.gitpod.io/api/token", opts)
 					if (resp.status !== 200){
 						console.error(resp.statusText) // better to show message on UI
 						return false;
@@ -72,7 +72,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				}
 					// fetching data from the backend
-				fetch("https://nicocarcamo-jwtauth-vyn67hewqg8.ws-us82.gitpod.io/api/hello", opts)
+				fetch("https://3001-nicocarcamo-jwtauth-4lchsqpz9v9.ws-us82.gitpod.io/api/hello", opts)
 					.then(resp => resp.json())
 					.then(data => setStore({ message: data.message }))
 					.catch(error => console.log("Error loading message from backend", error));
